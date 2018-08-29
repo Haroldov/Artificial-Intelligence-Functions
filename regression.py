@@ -21,7 +21,7 @@ def logisticRegression(features, labels, iterations, learningRate, sw):
         [rng, tmp] = np.where(labels == 0)
         plt.plot(features[rng, 0], features[rng, 1], 'bo',label = 'Clase 2')
         X2 = -1 * ((theta[0, 0] / theta[-1, 0]) + (theta[1, 0] / theta[-1, 0]) * features[:, 0])
-        plt.plot(data[:, 0], X2, 'r',label = 'Limite de Decision')
+        plt.plot(features[:, 0], X2, 'r',label = 'Limite de Decision')
         plt.xlabel('X1')
         plt.ylabel('Y1')
         plt.title('Grafica de Puntos')
